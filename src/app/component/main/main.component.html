@@ -1,1 +1,36 @@
-<h1>Hello, Word!</h1>
+<form action="">
+    <img src="./assets/clients.png" alt="Client"><br>
+    <input type="text" id="companyName" name="companyName" placeholder="Nome a Empresa" class="form-control" [(ngModel)]="client.companyName">
+    <input type="text" id="identificationNumber" name="identificationNumber" placeholder="CNPJ" class="form-control" [(ngModel)]="client.identificationNumber">
+    <input type="email" id="email" name="email" placeholder="E-mail" class="form-control" [(ngModel)]="client.email">
+    <input type="text" id="companySector" name="companySector" placeholder="Setor" class="form-control" [(ngModel)]="client.companySector">
+
+    <input  *ngIf="btnRegistration" type="button" value="Cadastrar" class="btn btn-primary" (click)="create()">
+    <input  *ngIf="btnAlter" type="button" value="Alterar" class="btn btn-warning" (click)="alterClient()"> 
+    <input  *ngIf="btnRemove" type="button" value="Remover" class="btn btn-danger" (click)="remove()">
+    <input  *ngIf="btnCancel" type="button" value="Cancelar" class="btn btn-secondary">
+</form>
+
+<table class="table" *ngIf="table">
+    <thead>
+        <tr>
+            <th>Selecionar</th>
+            <th>#</th>
+            <th>Empresa</th>
+            <th>CNPJ</th>
+            <th>E-mail</th>
+            <th>Setor</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let client of clients; index as i" >
+            <td><button class="btn btn btn-success" (click)="selectClient(i)">Selecionar</button></td>
+            <td>{{ i+1}}</td>
+            <td>{{ client.id }}</td>
+            <td>{{ client.companyName }}</td>
+            <td>{{ client.identificationNumber }}</td>
+            <td>{{ client.companySector }}</td>
+        </tr>
+    </tbody>
+</table>
