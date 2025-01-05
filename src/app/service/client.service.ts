@@ -24,7 +24,7 @@ export class ClientService {
     return this.http.put<Client>(this.url+"/"+client.id, client);
   }
 
-  public delete(id: number):Observable<void> {
-   return this.http.delete<void>(this.url +'/'+id); 
+  public delete(ids:number[]):Observable<void> {
+   return this.http.delete<void>(this.url,{body:ids}); 
   }
 }

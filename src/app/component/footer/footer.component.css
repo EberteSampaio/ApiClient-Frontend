@@ -1,0 +1,16 @@
+.bg-color-brown-light{
+    background-color: rgb(147, 86, 86);
+}
+
+.text-color-white{
+    color: white;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+}
+
+footer div{
+    margin-left: 20px;
+}

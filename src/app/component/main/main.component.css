@@ -1,8 +1,12 @@
 img{
-    width: 250px;
+    width: 150px;
     margin-bottom: 30px;
 }
 
+.bg-color-brow-light{
+    background-color: rgb(238, 222, 222);
+}
+/*
 input {
     margin-bottom: 10px;
 }
@@ -10,8 +14,10 @@ input {
 input[type="button"]{
     margin-right: 10px;
 }
+
 form{
+    border-radius: 10%;
     width: 500px;
     margin: 30px auto ;
     text-align: center;
-}
+}*/
